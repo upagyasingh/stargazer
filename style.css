@@ -1,0 +1,693 @@
+/* setting font from google : Ubuntu */
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+/* desiging the scroll-bar */
+::-webkit-scrollbar{
+    width: 10px;
+}
+::-webkit-scrollbar-track{
+    background-color: black;
+}
+::-webkit-scrollbar-thumb{
+    background-color: var(--hover-color);
+    border-radius: 30px;
+}
+/* setting body parameters */
+*{
+    margin: 0;
+    padding: 0;
+    font-family: "Ubuntu", sans-serif;
+    scroll-behavior: smooth;
+    list-style-type: none;
+
+}
+/* setting the variables */
+:root{
+    --c-text:#cdc6c3;
+    --hover-color:#70efbf;
+    --duration: 10s;
+    --num-elements: 8;
+}
+
+/* setting the background-image */
+body{
+    background-image: url(./images/background.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+/* modal designing */
+/* #m1 */
+.modal{
+    height: 100vh;width: 100vw;background-color: rgba(0, 0, 0, 0.763);
+    position: fixed;
+    z-index: 10;
+}
+.modal .cross{
+    position: absolute;
+    top: 20px;
+    right: 20px;
+}
+.mdata{
+    height: 400px;
+    width: 400px;
+    margin: auto;
+    background-color: red;
+}
+/* styling the navbar */
+#ham{
+    display: none;
+}
+nav{
+    height: 70px;
+    width: 100%;
+    /* background-color: red; */
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    z-index: 2;
+    background: linear-gradient(rgba(0, 0, 0, 0.659) 20%,rgba(128, 128, 128, 0.001));
+}
+.left,.center,.right{
+    height: inherit;
+    /* background-color: yellow; */
+    float: left;
+
+}
+/* styling .left div */
+.left{
+    width: 25%;
+    display: flex;
+    justify-content:center;
+    align-items: center;
+}
+
+.left a{
+    text-decoration: none;
+}
+.left p a{
+    font-size: 25px;
+    font-weight: 600;
+    margin-left: 10px;
+    color: var(--hover-color);
+    /* background-color: #70efbf; */
+
+}
+/* styling .center div */
+.center{
+    width: 50%;
+    /* background-color: gray;   */
+    text-align: center;
+    line-height: 70px;
+    
+}
+
+.center ul{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.center ul li{
+    list-style: none;
+    /* background-color: #cdc6c3; */
+    
+}
+.center ul li a{
+    text-decoration: none;
+    font-size: 18px;
+    color: white;
+    display: inline-block;
+    border-bottom: 4px solid transparent;
+    transition: all linear 1s;
+}
+/* hover effect on list items */
+.center ul li a:hover{
+    border-bottom: 3px solid var(--hover-color);
+    color: var(--hover-color);
+}
+/* syling .right div */
+.right{
+    width: 25%;
+    text-align: center;
+    line-height: 70px;
+}
+.right button,#lg1{
+    width: 130px;
+    height: 40px;
+    border-radius: 30px;
+    border: none;
+    background-color: var(--hover-color);
+    transition: all linear 1s;
+}
+.right button a,#alg1{
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+/* hover effect on button */
+.right button:hover{
+    box-shadow: 0px 0px 25px white;
+    background-color: #60cca3;
+}
+#lg1:hover{
+    box-shadow: 0px 0px 25px white;
+    background-color: #60cca3;
+}
+/* responsive navbar styling*/
+.res-navlist ul li a{
+    transition: all ease-in-out 1s;
+}
+.res-navlist {
+    height: 0px;
+}
+
+@media only screen and (max-width:900px){
+    body{
+        /* background-image: url(./images/astronaut.png); */
+    }
+    .left{
+        width: 40%;
+        padding-left: 30px;
+        box-sizing: border-box;
+    }
+    .right{
+        /* background-color: red; */
+        width: 50%;
+    }
+    .center{width: 10%;}
+    .center .navlist{
+        display: none;
+    }
+    #ham{
+        display: inline-block;
+    }
+    #ham i{
+        font-size: 25px;
+        color: var(--hover-color);
+        padding-left: 20px;
+        /* padding-right: 20px; */
+    }
+    .res-navlist{
+        /* height: 0px; */
+        width: 100vw;
+        /* background-color: transparent; */
+        backdrop-filter: blur(3px);
+        position: absolute;
+        top: 70px;
+        right: 0px;
+        transition: all linear 2s;
+        
+    }
+    .res-navlist ul{
+        /* display: none; */
+    }
+    .res-navlist ul li a{
+        text-decoration: none;
+        color: white;
+        font-size: 20px;
+    }
+    .res-navlist ul li:hover a{
+        font-size: 25px;
+        text-shadow: 5px 5px 10px white;
+        color: var(--hover-color);
+    }
+}
+.load1{
+    height: 350px;
+    background:linear-gradient(rgba(0, 0, 0, 0.481) 50%,rgba(128, 128, 128, 0.032));
+    transition: all linear .5s;
+
+}
+.load2{
+    height: 0px;
+    background:linear-gradient(rgba(0, 0, 0, 0.481) 50%,rgba(128, 128, 128, 0.032));
+    transition: all linear .5s;
+
+}
+.d1{
+    opacity: 0;
+    list-style-type: none;
+    transition: all linear .1s;
+
+}
+.d2{
+    opacity: 1;
+    list-style-type: none;
+    transition: all 2s linear 1s;
+
+}
+
+
+/* first page : Introduction  "#home" */
+.bparent{
+}
+#home{
+    height: auto;
+    padding-top: 150px;
+    width: 99vw;
+    /* background-color: red; */
+    position: relative;
+    top: 0px;
+    left: 0;
+    overflow: hidden;
+    
+}
+
+/* the text box */
+.parent1{
+    display: flex;
+}
+
+.spc1{
+    height: 200px;
+    width: 150px;
+    flex-shrink: 15;
+    /* float: left; */
+}
+.txt1{
+    /* background-color: blue; */
+    height: 350px;
+    width: 600px;
+    color: white;
+    font-size: 30px;
+    /* float: left; */
+    
+}
+.moon{
+    height: 100px;width: 100px;
+    /* background-color: green; */
+    position: absolute;
+    top: -60px;
+    left: 50%;
+    animation: moon 40s linear  infinite  ;
+    z-index: -2;
+    /* float: left; */
+}
+.moon img{
+    filter: drop-shadow(0px 0px 20px rgb(218, 23, 218));
+    animation: earth 5s linear  infinite  ;
+    
+}
+.earth{
+    clear: both;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    height: auto;
+    width: 70%;
+    
+    /* border-radius:50% ; */
+    /* background-color: grey; */
+    margin: auto;
+    /* padding: 0; */
+    display: flex;
+    overflow: hidden;
+}
+
+.earth img{
+    animation: earth 55s linear  infinite  ;
+    filter: drop-shadow(0px 0px 10px black);
+
+}
+.astro{
+    clear: both;
+    /* background-color: aqua; */
+    position: absolute;
+    top: 250px;
+    right: 10%;
+    z-index: -1;
+    animation: astro 3s linear  infinite  ;
+
+
+}
+.astro img{
+    height: 270px;
+}
+@keyframes earth {
+    from{
+        transform: rotate(0deg);
+    }
+    to{
+        transform: rotate(360deg);
+    }
+    
+}
+@keyframes astro {
+    0%{
+        transform: translate(0px,0px);
+    }
+    50%{
+        transform: translate(10px,10px);
+
+    }
+    100%{
+        transform: translate(0px,0px);
+    }
+}
+@keyframes moon {
+    0% {
+        transform: rotate(0deg) translateX(600px) ;
+    }
+    100% {
+        transform: rotate(360deg)  translateX(600px) ;
+    }
+}
+
+.parent2{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    /* background-color: #60cca3   ;     */
+}
+
+
+#cardSlider{
+    position: absolute;
+    top: 250px;
+    height: 460px;
+    width: 100%;
+    background-color: transparent;
+    overflow: hidden    ;
+    mask-image: linear-gradient(
+        to right,
+        transparent,
+        #b76868 30% 70%,
+        transparent
+    );
+    /* background-color: rgba(255, 0, 0, 0.826); */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 20px;
+    box-sizing: border-box;
+}
+.cardbg{
+    height: 400px;
+    width: 80%;
+    background-color: transparent;   
+    position: relative;
+    display: flex;
+    width: 100%;
+    min-width: calc(var(--width) * var(--quantity));
+    position: relative;
+}
+.cardbgData{ 
+    width: var(--width);
+    height: 400px;
+    padding: 20px;
+    box-sizing: border-box;
+    position: absolute;
+    transition: filter linear 1s;
+    background-color: #e38686;
+    background-image: url(./images/cardBg.jpg);
+    border-radius: 20px;
+    color: white;
+    left: 100%;
+    animation: autorun 10s linear infinite;
+    transition: filter 0.5s;
+    animation-delay: calc( (10s / var(--quantity)) * (var(--position) - 1) )!important;
+}
+.cardbgData img{
+    display: block;
+    margin: auto;
+    position: relative;
+    top: -50px;
+    border-radius: 50%;
+    height: 100px;
+    width: 100px;
+}
+.cardbgData button{
+    display: block;
+    margin: auto;
+    height: 50px;
+    width: 150px;
+    background-color: white;
+    color: purple;
+    border-radius: 20px;
+    border: 5px groove purple;
+}
+
+.cardbg:hover .cardbgData{
+    animation-play-state: paused;
+    filter: grayscale(1);
+}
+
+#cardSlider .cardbgData:hover{
+    filter: grayscale(0);
+}
+
+
+@keyframes autorun{
+    from{
+        left: 100%;
+    }to{
+        left: calc(var(--width) * -1);
+    }
+}
+
+
+
+/* explore */
+#spaceSnap{
+    height: 100vh;
+    width: 100%;
+    /* background-color: #60cca3; */
+}
+#spaceSnap{
+    background-color: transparent;
+    color: white;
+}
+#spaceSnap img{
+    width: 80%
+}
+#spaceSnap #bckimg{
+    background-image: url(./images/cardBg.jpg);
+    padding: 25px;
+    box-sizing: border-box;
+    border-radius: 30px;
+}
+
+/* experience */
+#exp,#login{
+    height: 100vh;
+    width: 100%;
+    /* background-color: #9b60cc; */
+    display: flex;
+}
+#exp{
+    height: auto;
+    padding: 40px;
+    box-sizing: border-box;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    color: white;
+}
+#exp img{
+    margin: 20px;
+    width: 150px ;
+    animation: astro 3s linear  infinite  ;
+    filter: drop-shadow(0px 0px 20px white);
+}
+#exp .abc{
+    background-image: url(./images/cardBg.jpg);
+    padding: 50px;
+    color: white;
+    /* width: 300px; */
+    border-radius: 30px;
+    box-shadow: 0px 0px 20px white;
+}
+#login{
+    justify-content: center;
+    align-items: center;
+}
+#loginForm{
+    height: auto;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    box-sizing: border-box;
+    width: 60%;
+    background-color: #b76868;
+    background-image: url(./images/cardBg.jpg);
+    color: white;
+    font-size: larger;
+    border-radius: 30px;
+    box-shadow: 0px 0px 20px white;
+    animation: astro 4s linear  infinite  ;
+    background-size: cover;
+    /* background-repeat: no-repeat; */
+
+}
+.lgfm{
+    margin: auto;
+    margin-top: 100px;
+}
+#loginForm h1{
+    font-size: 35px;
+}
+
+#loginForm input{
+    height: 30px;
+    width: 100%;
+    border-radius: 20px;
+    border: 4px solid purple;
+}
+#loginForm button{
+    height: 50px;
+    width: 50%;
+    border-radius: 20px;
+    border: 4px solid white;
+    color: white;
+    font-size: larger;
+    background-image: url(./images/cardBg.jpg);
+}
+/* footer */
+footer{
+    height: 10vh;
+    width: 100%;
+    background-image: url(./images/cardBg.jpg);
+    filter: blur(5px);
+}
+
+#spaceSnap{
+    padding: 20px;
+    box-sizing: border-box;
+    height: auto;
+}
+
+#spaceSnap img{
+    display: block;
+    margin: auto;
+
+}
+
+/* Media Queries */
+/* for Home Page */
+@media only screen and (max-width:850px) {
+   #stellar{
+    display: block;
+   }
+}
+@media only screen and (max-width:1100px) {
+    .earth{width: 85%;}
+    #cardSlider{
+        top: 130px;
+        height: 450px;
+    }
+    .cardbg{
+    }
+    .cardbgData{
+        
+        /* padding: 30px;
+        padding-top: 70px; */
+        box-sizing: border-box;
+    }
+ }
+ @media only screen and (max-width:700px) {
+    
+    #cardSlider{
+        top: 70px;
+    }
+    .cardbg{
+        height: 300px;
+    }
+    .cardbgData{
+        height: 250px;
+        /* padding: 30px; */
+        /* padding-top: 70px;/ */
+        box-sizing: border-box;
+    }
+ }
+@media only screen and (max-width:600px) {
+    .left{
+        width: 30%;
+    }
+    #home{
+       padding-left: 10px;
+    }
+    #stargazer{display: none;}
+    .astro{
+        top: 300px;
+        right: 10px;
+    }
+    .astro img{
+        height: 200px;
+    }
+    .parent2{
+        width: 200%;
+        /* background-color: red; */
+    }
+    .earth{
+        width: 100%;
+
+    }
+    .earth img{
+        width: 60%;
+        height: 60%;
+    }
+    #cardSlider{
+        top: 130px;
+    }
+    .cardbgData{
+        height: 300px;
+        /* padding: 30px;
+        padding-top: 70px; */
+        box-sizing: border-box;
+    }
+}
+@media only screen and (max-width:480px) {
+    #cardSlider{
+        top: 50px;
+    }
+    .cardbgData{
+        height: 300px;
+        /* padding: 30px;
+        padding-top: 70px; */
+        box-sizing: border-box;
+    }
+ }
+
+@media only screen and (max-width:700px){
+    #loginForm{
+        width: 96%;
+    }
+    
+}
+
+ /* modal pop-up */
+ #m1 #mdata1{
+    height: 500px;
+    width: 60%;
+    margin-top: 100px;
+    background-image: url(./images/background.jpg);
+    color: white;
+    padding: 50px;
+    box-sizing: border-box;
+    border-radius: 50px;
+    box-shadow: 0px 0px 20px white;
+    animation: astro 3s ease-in-out  infinite  ;
+   
+ }
+
+ #tbl{
+    margin-top: 30px;
+    height: auto;
+    width: 100%;
+    /* background-color: red; */
+ }
+
+ #tbl table{
+    margin: auto;
+    height: 300px;
+    width: 60%;
+    font-size: 26px;
+ }
+
+ 
+@media only screen and (max-width:700px) {
+    #m1 #mdata1{
+        width: 96%;
+        background-color: red;
+    }
+    
+}

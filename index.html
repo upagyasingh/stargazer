@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Stargazer</title>
+    <link rel="shortcut icon" href="./images/logo.png" type="image/x-icon" />
+    <link rel="stylesheet" href="style.css" />
+    <script
+      src="https://kit.fontawesome.com/591a1d5322.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <!-- modal -->
+    <div class="modal" id="m1">
+      <div class="cross" onclick="close1()">
+        <i class="fa-solid fa-square-xmark fa-2xl" style="color: #ff0000"></i>
+      </div>
+      <div class="mdata" id="mdata1"></div>
+    </div>
+
+    <!-- login modal -->
+    <div class="modal" id="m2">
+      <div class="cross" onclick="close1()">
+        <i class="fa-solid fa-square-xmark fa-2xl" style="color: #ff0000"></i>
+      </div>
+      <div id="loginForm" class="lgfm">
+        <div class="form">
+          <form action="">
+            <h1 align="center">Signup</h1>
+            <table
+              align="center"
+              border="0"
+              cellspacing="20"
+              style="margin: auto"
+            >
+              <tr>
+                <td><label for="name" class="lb">Enter your Name</label></td>
+                <td><input type="text" name="" id="name11" /></td>
+              </tr>
+              <tr>
+                <td>
+                  <label for="email" class="lb">Enter your Email</label>
+                </td>
+                <td><input type="text" name="" id="email1" /></td>
+              </tr>
+              <tr>
+                <td>
+                  <label for="pass" class="lb">Enter your Password</label>
+                </td>
+                <td><input type="password" name="" id="pass1" /></td>
+              </tr>
+              <tr>
+                <td>
+                  <label for="cpass" class="lb">Confirm your Password</label>
+                </td>
+                <td><input type="password" name="" id="cpass1" /></td>
+              </tr>
+              <tr>
+                <td colspan="2" align="center">
+                  <button type="submit" id="formsub" onclick="signup1()">
+                    Submit
+                  </button>
+                </td>
+              </tr>
+            </table>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <!-- navbar -->
+    <nav>
+      <div class="left">
+        <div class="img">
+          <img
+            src="images/logo.png"
+            alt="logo-image"
+            height="60px"
+            width="60px"
+          />
+        </div>
+        <p id="stargazer"><a href="">Stargazer</a></p>
+      </div>
+      <div class="center">
+        <ul class="navlist">
+          <li class="listLink"><a href="#home">Home</a></li>
+          <li class="listLink"><a href="#cardSlider">Explore</a></li>
+          <li class="listLink"><a href="#spaceSnap">Space-Snap</a></li>
+
+          <li class="listLink"><a href="#exp">Experience</a></li>
+        </ul>
+      </div>
+
+      <div class="right">
+        <button id="lgbtn1">
+          <a href="#login" id="login01">Signup</a>
+        </button>
+        <div id="ham">
+          <i class="fa-solid fa-bars" onclick="appear()"></i>
+          <div class="res-navlist" id="res__navlist">
+            <ul class="navlist" id="res__ul">
+              <li class="listLink h"><a href="#home" class="c">Home</a></li>
+              <li class="listLink h">
+                <a href="#cardSlider" class="c">Explore</a>
+              </li>
+              <li class="listLink h">
+                <a href="#spaceSnap" class="c">Space-Snap</a>
+              </li>
+              <li class="listLink h">
+                <a href="#exp" class="c">Experience</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <!-- first page : Introduction -->
+    <section id="home">
+      <div class="parent1">
+        <div class="spc1"></div>
+        <div class="txt1">
+          <h1>
+            <span style="color: var(--hover-color)" id="stellar"
+              >Stellar Horizons:</span
+            >
+            Exploring the Universe
+          </h1>
+          <br />
+          <button id="lg1"><a href="#login" id="alg1">Join Us</a></button>
+        </div>
+        <div class="moon">
+          <img src="./images/moon.png" alt="" height="100px" width="100px" />
+        </div>
+      </div>
+      <div class="astro">
+        <img src="./images/hero.png" alt="" />
+      </div>
+      <div class="parent2">
+        <div class="earth">
+          <img
+            src="./images/earthPlanet.png"
+            alt=""
+            width="100%"
+            style="display: block; margin: auto"
+          />
+        </div>
+        <!--Card Slider : expandable-->
+        <!-- modal -->
+
+        <div
+          id="cardSlider"
+          class="slider"
+          style="--width: 300px; --height: 50px; --quantity: 8"
+        >
+          <div class="cardbg"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- API Integration : -->
+    <section id="spaceSnap">
+      <h1
+        align="center"
+        style="border-bottom: 5px solid white; font-size: 40px"
+      >
+        Space Snap
+      </h1>
+    </section>
+    <!-- Cart option only After Login Authentication -->
+    <section id="exp">
+      <h1 align="center" style="border-bottom: 5px solid white">
+        Our Experience
+      </h1>
+
+      <img src="./images/Spaceship.png" alt="" />
+      <div class="abc">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias
+        blanditiis quod quo tempore totam illo esse aperiam perferendis
+        similique. Sequi beatae provident deserunt sed fugiat. Quia cumque at
+        sapiente non! Blanditiis officiis aliquam amet dignissimos dicta
+        commodi, cumque beatae magnam adipisci nisi minima laudantium
+        necessitatibus qui ex hic explicabo et.
+      </div>
+    </section>
+    <!-- Login/Sign-up System -->
+    <section id="login">
+      <div id="loginForm">
+        <div class="form" id="f-data2">
+          <form action="">
+            <h1 align="center">Signup</h1>
+            <table
+              align="center"
+              border="0"
+              cellspacing="20"
+              style="margin: auto"
+            >
+              <tr>
+                <td><label for="name" class="lb">Enter your Name</label></td>
+                <td><input type="text" name="" id="name" /></td>
+              </tr>
+              <tr>
+                <td><label for="email" class="lb">Enter your Email</label></td>
+                <td><input type="text" name="" id="email" /></td>
+              </tr>
+              <tr>
+                <td>
+                  <label for="pass" class="lb">Enter your Password</label>
+                </td>
+                <td><input type="password" name="" id="pass" /></td>
+              </tr>
+              <tr>
+                <td>
+                  <label for="cpass" class="lb">Confirm your Password</label>
+                </td>
+                <td><input type="password" name="" id="cpass" /></td>
+              </tr>
+              <tr>
+                <td colspan="2" align="center">
+                  <button type="submit" id="formsub" onclick="signup()">
+                    Submit
+                  </button>
+                </td>
+              </tr>
+            </table>
+          </form>
+        </div>
+      </div>
+    </section>
+    <!-- Footer -->
+    <footer></footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
