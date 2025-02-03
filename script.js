@@ -297,10 +297,10 @@ function checkLocal(){
         document.getElementById('login').style.display="none";
     }
     else{
-        setTimeout(()=>{
-            m2.style.display="block"
-        },30000)
-        document.getElementById('login').style.display="flex";
+        // setTimeout(()=>{
+        //     m2.style.display="block"
+        // },30000)
+        // document.getElementById('login').style.display="flex";
 
     }
     }

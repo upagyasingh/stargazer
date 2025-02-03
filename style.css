@@ -467,7 +467,7 @@ nav{
 }
 
 /* experience */
-#exp,#login{
+#exp,#login,#cosmoeats{
     height: 100vh;
     width: 100%;
     /* background-color: #9b60cc; */
@@ -545,8 +545,14 @@ nav{
 footer{
     height: 10vh;
     width: 100%;
-    background-image: url(./images/cardBg.jpg);
-    filter: blur(5px);
+    /* background-image: url(./images/cardBg.jpg); */
+    /* filter: blur(5px); */
+    background-color: rgb(19, 3, 39);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 #spaceSnap{
